@@ -1,0 +1,12 @@
+1) Shows manual for a command. Enter for scroll, q to exit.
+2) -l flag shows long list, details. -a flag shows all
+3) CTRL arrow
+4) CTRL E
+5) CTRL A
+6) CTRL W
+7) Terminal is UI that shows the shell, the shell is the command interface
+8) Full path to a file or directory
+9) Path that uses where you are or ~ to navigate
+10) Options for commands, -a -S -l
+11) -f forces removal, ignores nonexistant files, no prompts
+-r removes directories and contents
