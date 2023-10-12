@@ -1,0 +1,187 @@
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   app.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep$ git diff
+diff --git a/app.js b/app.js
+index 4800b92..fbf10cd 100644
+--- a/app.js
++++ b/app.js
+@@ -1,3 +1,4 @@
+ function{
+     console.log("HELLO WORLD");
++    console.log("DONE");
+ }
+\ No newline at end of file
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep$ ls
+app.js  index.html
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep$ ls -a
+.  ..  .git  app.js  index.html
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep$ mkdir learn_git_again
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep$ cd learn_git_again
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ touch third.txt
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /mnt/c/Bootcamp/gitrep/learn_git_again/.git/
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        third.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git add third.txt
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git commit third.txt "adding third.txt"error: pathspec 'adding third.txt' did not match any file(s) known to git
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git commit third.txt "adding third.txt"error: pathspec 'adding third.txt' did not match any file(s) known to git
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   third.txt
+
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git commit -m third.txt "adding third.txt"
+error: pathspec 'adding third.txt' did not match any file(s) known to git
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git commit -m "adding third.txt"
+[master (root-commit) 6794790] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git log
+commit 6794790685af3285cb6c9e0489290c77acbefccf (HEAD -> master)
+Author: robleo <releonardfl@gmail.com>
+Date:   Thu Oct 12 16:01:36 2023 -0400
+
+    adding third.txt
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ touch fourth.txt
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git commit -m "adding fourth.txt"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fourth.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git add fourth.txt
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git commit -m "adding fourth.txt"
+[master c5e348c] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ rm third.txt
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    third.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git add .
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    third.txt
+
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git commit -m "removing third.txt"
+[master c318bea] removing third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git log
+commit c318beaf54e349db28518c564b6d8aabe241c28f (HEAD -> master)
+Author: robleo <releonardfl@gmail.com>
+Date:   Thu Oct 12 16:02:52 2023 -0400
+
+    removing third.txt
+
+commit c5e348c0abc8bb6dda8ce9c0349df5449af8d4df
+Author: robleo <releonardfl@gmail.com>
+Date:   Thu Oct 12 16:02:14 2023 -0400
+
+    adding fourth.txt
+
+commit 6794790685af3285cb6c9e0489290c77acbefccf
+Author: robleo <releonardfl@gmail.com>
+Date:   Thu Oct 12 16:01:36 2023 -0400
+
+    adding third.txt
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git config --global core.pager=cat
+error: invalid key: core.pager=cat
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git config --global core.pager 'cat'
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git config --global -l
+user.email=releonardfl@gmail.com
+user.name=robleo
+core.pager=cat
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ ls
+fourth.txt
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ ls -l
+total 0
+-rwxrwxrwx 1 robleo robleo 0 Oct 12 16:01 fourth.txt
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ ls -a
+.  ..  .git  fourth.txt
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$ git config --global --list
+user.email=releonardfl@gmail.com
+user.name=robleo
+core.pager=cat
+robleo@DESKTOP-PIOEFN6:/mnt/c/Bootcamp/gitrep/learn_git_again$
