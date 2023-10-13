@@ -1,0 +1,23 @@
+Git commands
+
+- git init - initialize git in this area
+- git status - check status of git area
+- git add x - add to the commit ready area
+   - git add . - add to the commit area changes to all files
+- git commit x ""- commit changes
+- git branch - list branches
+- git branch x - go to that branch
+- git branch -d x - delete a branch
+   * Cannot delete a branch you are currently on
+- git checkout - move to a branch
+- git checkout -b - create a branch and move to it
+- git log --oneline - show the logs one line a piece
+- Merging branches
+   - git merge x
+   - branches are merged into the branch you are on
+- Merge Conflicts
+   1) Fast forward merge - git knows commits to apply, easy
+   2) Recursive merge - When changes come from multiple branches on same file
+
+
+Try to always make sure there are no uncommitted changes before doing other actions on branches
