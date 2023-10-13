@@ -4,7 +4,7 @@ Git commands
 - git status - check status of git area
 - git add x - add to the commit ready area
    - git add . - add to the commit area changes to all files
-- git commit x ""- commit changes
+- git commit -m ""- commit changes
 - git branch - list branches
 - git branch x - go to that branch
 - git branch -d x - delete a branch
