@@ -1,0 +1,12 @@
+- What ***git*** command creates a branch?
+git branch x where "x" is the name you want to use for the new branch
+- What is the difference between a fast-forward and recursive merge?
+Fast-forward merge is an easy merge with no conflicts
+Recursive merge has conflicts where one has to decide which changes to commit.
+- What ***git*** command changes to another branch?
+git checkout x where x is the branch name
+- What ***git*** command deletes a branch?
+git branch -d x where x is the branch name
+git branch -D x will force delete if there are changes in the branch not committed
+- How do merge conflicts happen?
+When the two branches being merged have different changes to the same file.
